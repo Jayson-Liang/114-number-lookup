@@ -1,0 +1,25 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - 喂
+    - 你好
+    - 你在吗
+- intent: affirm
+  examples: |
+    - 好的，谢谢
+- intent: bot
+  examples: |
+    - 你是机器人吗
+- intent: require
+  examples: |
+    - 我想知道[浙江工业大学](location)的电话号码
+    - [浙工大](location)的电话是多少？
+    - 给我[杭州银行](location)的电话
+    - 查一下那个[俄罗斯大使馆](location)的那个号码
+    - [如家酒店](location)的电话是啥？
+    - [黄龙体育中心](location)的号码是什么？
+    - [中国电子信息第36研究所](location)的电话
+    - 查一下[周员外饭店](location)的电话
+    - [留下派出所](location)的电话是?

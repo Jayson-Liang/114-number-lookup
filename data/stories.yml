@@ -1,0 +1,23 @@
+version: "2.0"
+
+stories:
+
+- story: happy
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: require
+  - action: utter_ask_location
+  - intent: require
+    entities:
+    - location: 浙工大
+  - action: utter_info
+
+
+#- story: test
+#  steps:
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: require
+#  - action: asklocation_form
+#  - active_loop: asklocation_form

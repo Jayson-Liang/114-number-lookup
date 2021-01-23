@@ -1,0 +1,27 @@
+version: "2.0"
+
+rules:
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot
+  - action: utter_iamabot
+
+- rule: Say affirm anytime say goodbye
+  steps:
+  - intent: affirm
+  - action: utter_goodbye
+
+#- rule: activate asklocation form
+#  steps:
+#  - intent: require
+#  - action: asklocation_form
+#  - active_loop: asklocation_form
+#
+#- rule: deactivate asklocation form
+#  condition:
+#  - active_loop: asklocation_form
+#  steps:
+#  - action: asklocation_form
+#  - active_loop: null
+#  - action: utter_info

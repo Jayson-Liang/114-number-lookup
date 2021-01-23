@@ -1,0 +1,39 @@
+version: "2.0"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+intents:
+  - greet
+  - require
+  - affirm
+  - bot
+entities:
+  - location
+slots:
+  location:
+    type: text
+    influence_conversation: true
+    auto_fill: ture
+responses:
+  utter_greet:
+  - text: "您好，我是114查号助手"
+
+  utter_info:
+  - text: "{location}的电话号码是："
+
+  utter_ask_location:
+  - text: "您想查询哪个地方的号码呢？"
+
+  utter_goodbye:
+  - text: "再见"
+
+  utter_iamabot:
+  - text: "我是查号机器人"
+
+#forms:
+#  asklocation_form:
+#    location:
+#    - type: from_entity
+#      entity: location
